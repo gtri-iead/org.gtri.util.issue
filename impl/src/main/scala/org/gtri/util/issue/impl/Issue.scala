@@ -2,6 +2,7 @@ package org.gtri.util.issue.impl
 
 import org.gtri.util.issue.api
 import api.ImpactCode._
+import org.gtri.util.scala.exelog.ExeLog
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,7 +16,6 @@ abstract class BaseIssue extends api.Issue {
   val nanoTime : Long = System.nanoTime()
   val thread : Thread = Thread.currentThread()
 }
-
 case class Issue(message : String, impactCode : api.ImpactCode) extends BaseIssue
 case class ExceptionIssue(message : String, exception : Throwable, impactCode : api.ImpactCode) extends BaseIssue with api.ExceptionIssue
 case class DebugIssue(message : String, level : Int) extends BaseIssue with api.DebugIssue {

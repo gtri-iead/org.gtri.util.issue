@@ -12,9 +12,12 @@ resolvers += "iead-all" at "https://iead.ittl.gtri.org/artifactory/all" // need 
 
 libraryDependencies += "org.scalatest" % "scalatest_2.10.0-RC5" % "2.0.M5-B1"
 
+libraryDependencies += "log4j" % "log4j" % "1.2.17"
+
+libraryDependencies += "org.gtri.util" %% "scala.exelog" % "1.0-SNAPSHOT"
+
 libraryDependencies += "org.gtri.util" % "issue.api" % "1.0-SNAPSHOT"
 
-libraryDependencies += "log4j" % "log4j" % "1.2.17"
 
 publishTo <<= {    // set publish repository url according to whether `version` ends in "-SNAPSHOT"
   val releases = "iead-artifactory" at "https://iead.ittl.gtri.org/artifactory/internal"
